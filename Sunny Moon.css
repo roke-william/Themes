@@ -1,0 +1,181 @@
+/*-----------------------------------------------------------------------------
+  A Limechat theme by Natale Castelli
+  The Hentai Rocky Theme is by Natale Castelli
+  
+  base03:  #002B36;
+  base02:  #073642;
+  base01:  #586E75;
+  base00:  #657B83;
+  base0:   #839496;
+  base1:   #93A1A1;
+  base2:   #EEE8D5;
+  base3:   #FDF6E3;
+  yellow:  #B58900;
+  orange:  #CB4B16;
+  red:     #D30102;
+  magenta: #D33682;
+  violet:  #6C71C4;
+  blue:    #268BD2;
+  cyan:    #2AA198;
+  green:   #859900;
+-----------------------------------------------------------------------------*/
+
+html {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 10pt;
+  background-color: #272727;
+  color: #a0a0a0;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+}
+
+body { margin: 0; padding: 0; }
+
+/* the html tag has these classes and attributes too */
+body.normal {
+  margin-top: 2.0em;
+}
+body[type=channel] {}
+body[type=talk] {}
+body[type=console] {}
+body[channelname=#limechat] {}
+
+hr { margin: 0.5em 2em; }
+a {
+  color: #9f6363;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* lines */
+.line { 
+  padding: 0;
+  margin: 0;
+}
+.line[alternate=even] {}
+.line[alternate=odd] {}
+.line[type=action] {
+  font-style: italic;
+  color: #5f5f5f;
+}
+.line[type=action] .sender:before {
+  content: ""
+}
+.line[highlight=true] {
+
+}
+.message {
+  margin-left: 8em;
+  margin-right: 5em;
+  display: block;
+}
+.url { word-break: break-all; }
+.address { 
+  text-decoration: underline; 
+  word-break: break-all; 
+}
+.highlight {
+  color: #49cb16;
+}
+.event {
+  color: #3c5e69;
+}
+.event .message {
+  color: #959474;
+}
+.time {
+  float: right;
+  text-align: left;
+  width: 4em;
+	color: 5f6969;
+}
+.duptime {
+  display: none;
+}
+/* nickname for text messages */
+body.normal .sender {
+  overflow: hidden;
+  word-wrap: normal;
+  width: 7em;
+  padding-left: 5px;
+  padding-right: 5px;
+  float: left;
+  text-align: right;
+  font-weight: bold;
+}
+.sender[type=myself] {
+  color: #4e9da4;
+}
+.sender[type=normal] { 
+  color: #a7a032;
+}
+.inlineimage {
+  padding: 0;
+  margin: 0.5em 0;
+}
+
+/* console styles */
+body.console {
+  font-family: "Meslo", "Menlo", "Courier New", monospace;
+  padding: 0px 12px;
+  background-color: #2f3d41;
+}
+body.console a {
+  color: #268BD2;
+}
+body.console .line {
+  border: none;
+  padding: 0;
+}
+body.console .line[highlight=true] {
+  color: #FFD36A;
+}
+body.console .place {
+  color: #6C71C4;
+}
+body.console .highlight {
+  color: #bf3800;
+}
+body.console .sender {
+  padding: 0;
+  margin-right: 0.5em;
+  color: #859900;
+}
+body.console .message {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  color: #93A1A1;
+}
+body.console .message[type="quit"], 
+body.console .message[type="join"],
+body.console .message[type="nick"],
+body.console .message[type="topic"],
+body.console .message[type="mode"],
+body.console .message[type="part"],
+body.console .message[type="kill"],
+body.console .message[type="notice"],
+body.console .message[type="invite"] {
+  padding: 0;
+  color: #fa6565;
+}
+body.console .time {
+  color: #586E75;
+}
+
+#topic {
+  color: #27444b;
+  background-color: #39565f;
+  padding: 0.25em 0;
+  margin: 0;
+  min-height: 1.0em;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  text-align: center;
+}
